@@ -32,6 +32,23 @@ subresources:
   - S3-IA(Infrequently accessed) but requires rapid access when needed lower fe than S3, charged for retrieval dee
   - Reduces Redundancy storage - Designed to provide 99.99% durability and 99.99% availability of objects over a given year
   - Glacier - Very cheap, used for archival only. It takes 3-5 hours to restore from glacier
+  
+ # S3 charges:
+ storage
+ Requests
+ Storage Management Pricing
+ Data transfer pricing
+ 
+ # S3 Transfer Accceleration:
+ fast easy and secure transfer of files over long distances(user->cloudfronts global ntwk->s3(optimised path)
+ 
+ # S3 Versioning:
+ Store all versions of object
+ backup tool
+ Once enabled versioning cannot be disabledonly suspended
+ Integrates with life cycle rules
+ Versioning's MFA capability multi factor authentication
+
 
 
 
