@@ -1,0 +1,37 @@
+# Simple Storage Service
+provices secure durable and highly scalable object storage
+object storage: videos,photos,pdf, docs (i..e flat files)
+data spread across multiple devices and facilities.
+
+# Basic
+S3 object based allows to upload files
+size-0 Bytes - 5TB
+unlimited storage
+files are stored in buckets(Folders)
+S3 universally name space(names must be unique)
+bucket url: https://<s3-eu-west-1>(region).amazonaws.com/<bucketname>
+
+
+# Data Consistency Model
+read after write consisyency for new objects (immediately read after write)
+Eventual consistency for overwrite  puts and deletes (can take some time to propagate)
+updates to s3 are atomic (whether get old or new data not currepted)
+
+# key value store
+object based:
+key(name of object)(starting names of objects should inique name recomended )
+value(data)
+versionid
+metadata(data about data u are storing)
+subresources:
+ -Access control lists
+ -Torrent
+ 
+ # S3 storage tier /classses
+  - S3-99.99% availability, 99.999999999% durability. stored reduntant across multiple devices in multiple facilities designed to sustain loss of 2 facilities
+  - S3-IA(Infrequently accessed) but requires rapid access when needed lower fe than S3, charged for retrieval dee
+  - Reduces Redundancy storage - Designed to provide 99.99% durability and 99.99% availability of objects over a given year
+  - Glacier - Very cheap, used for archival only. It takes 3-5 hours to restore from glacier
+
+
+
