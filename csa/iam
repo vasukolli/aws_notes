@@ -1,0 +1,16 @@
+# Identity Access Management
+
+Features:
+Centralized control of your aws account
+shared access
+granular permissions
+Identity fedaration(AD, Facebook, Linkedin etc)
+temporary access for users and devices and services
+Multi factor authentication
+password rotation policy
+integrates with aws services
+
+Terms:
+Users, groups, roles(assign to aws resources), policies(doc with one or more permissions)
+
+
