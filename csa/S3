@@ -48,6 +48,14 @@ subresources:
  Once enabled versioning cannot be disabledonly suspended
  Integrates with life cycle rules
  Versioning's MFA capability multi factor authentication
+ 
+ # S3 life cycle management
+ used conjuction with versioning
+ can bed applied to current and previous version
+ Following actions can now be done:
+  -to Standard-Infrequent Access Storage30 days after creation date
+  -to Glacier 30 days after S-IA
+  -permanently delete
 
 
 
