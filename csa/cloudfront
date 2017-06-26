@@ -1,0 +1,12 @@
+# KEy Terminology
+  Edge location: location where content is cached, this is separate to aws region/az
+  Origin: origin of all files are located(S3,EC2,Route53, elastic load balancer)
+  Distribution: name given the CDN which consists of collections of edge locations 
+  Web Distributuin: used for websites
+  RTMP: used for media streaming
+  Edge locations both read and write files
+  Objects are cached for life of ttl(time to live)
+  you can clear cached objects but it will be charged
+  
+ Tips:
+ we can have multiple origins in same distribution
