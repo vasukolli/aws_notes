@@ -56,6 +56,18 @@ subresources:
   -to Standard-Infrequent Access Storage30 days after creation date
   -to Glacier 30 days after S-IA
   -permanently delete
+  
+  # Security
+    by default all buckets are private
+    you can setup acl's: Bucket policies and access control lists
+    we can log requests to of S3 using another S3 buckets or another aws account
+   # Encryption:
+   Types:
+   In transit(SSl/TLS): encrypt when date send to and fro to bucket
+   At Rest:
+    -Server side encryption
+    
+    
 
 
 
