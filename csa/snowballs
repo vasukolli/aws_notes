@@ -1,0 +1,12 @@
+transfer large amounts of data in and out of aws excludiing internet path.
+Amazon gives appliance store data on that and give to aws then it will transfer to aws from appliance.
+Import and Export to s3
+Types:
+ -snoball(50-80TB)(storage capacity): uses multiple layers of security(tamper-resistent enclosures, 256-bit encryption and industry standard trusted platform
+  module(TPM)), once data transfered aws performs software errasure
+ -snowball edge(100TB)(compute + storage capacity ):same as snowball but provides storage and appliance.
+  connects to existing apps using standard storage interfaces 
+ -snowball mobile(100PB): massive storage(petabite or exabite of storage)(6 months to transfer)
+ 
+ Legacy:
+ Import and Export (client sends storage devices to aws)
