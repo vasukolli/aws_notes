@@ -61,12 +61,16 @@ subresources:
     by default all buckets are private
     you can setup acl's: Bucket policies and access control lists
     we can log requests to of S3 using another S3 buckets or another aws account
-   # Encryption:
+  # Encryption:
    Types:
-   In transit(SSl/TLS): encrypt when date send to and fro to bucket
-   At Rest:
-    -Server side encryption
-    
+    -In transit(SSl/TLS): encrypt when date send to and fro to bucket
+    -At Rest:
+     -Server side encryption
+       -S3 Managed Keys - SSE-S3: each object is encrypted with unique key(AES-256)+encrypt keys with master key and regularly rotates master key
+       -AWS Key management service, Managed keys -SSE-KMS: few additional benifits and charges
+         - provides envolo keys which is master key to protect SSE-KMS keys nad logs for who is decrypting
+       -Server side encryption with customer provided keys-SSE-C 
+     -Client side encryption
     
 
 
