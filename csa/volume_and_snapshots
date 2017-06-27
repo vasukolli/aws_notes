@@ -1,0 +1,14 @@
+-volumes should be in same availability zone  for attaching to EC2 instance
+# Adding volumes
+ -Create volume using web console
+ -ssh to instance issue lsblk to list devices
+ -create a folder for mounting
+ -vreate file system - mkfs -t ext4 /dev/xvdf
+ -mount /dev/xvdf foldername
+ 
+#Note
+we can change volume type while creating new volume from snapshot
+volumes exist on EBS
+volumes are virtual hard disk
+Snapshots exis on S3
+Snapshots are pointin time copies of volumes nad are incremental
