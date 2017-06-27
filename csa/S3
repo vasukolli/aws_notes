@@ -71,6 +71,11 @@ subresources:
          - provides envolo keys which is master key to protect SSE-KMS keys nad logs for who is decrypting
        -Server side encryption with customer provided keys-SSE-C 
      -Client side encryption
+     
+   # S3 transfer acceleration
+   uses clout front edge network to accelerate to transfer data to s3 using distinct url
+   url: vasukolli.s3-accelerate.amazonaws.com
+   -we can generate url in aws s3 properties tab -> transfer accelerate
     
 
 
