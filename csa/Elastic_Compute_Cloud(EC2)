@@ -1,0 +1,39 @@
+# EC2: provides compute capacity in the cloud.
+  -on demand- allow you pay a fixed rate by the hour with no commitmant
+  -reserved- provide you with a capacity reservation nad offer a discount on hourly charge for an instance. 1year or 3year terms
+  -spot- enable to bid price for ur instance capacity. if cost exceedes then instances automatically terminated
+  -Dedicated Hosts- physical EC2 server whe can reduce costs by allowing you to use existing server bound software licenses
+   can be purchased on demand hourly
+  -On Demand-on demand instances without commitment or up-front payment
+  
+  Note:
+  -if amazon EX2 terminates spot instances then you will not be charged for partial hour,
+   if terminated by your self then you will be charge
+  -if EC2 delete by default disks and volumes associated with EC2 deleted
+  -By default EBS root volumes of default AMI's cannot be encrypted 
+   -can be done by third party tools
+  
+  # Instance types:
+    -D for density
+    -I for IOPS
+    -R for RAM
+    -T cheap general purpose
+    -M main choice for general purpose apps
+    -C compute
+    -G graphics
+    -F FPGA (Field programmable gate array)hardware acceleration for your code
+    -P graphics (think pics)
+    -X Xtreme memory
+    DR Mc GIFT PX
+    
+  # Tags for custom recognisation  
+ 
+  # Security Group (Virtual firewall)(State Full)
+    -rule applied to security group applied immediately
+    -Rules are stateful (i..e) if inboud rule allowed then automatically outbound rule also allowed irrespective of outbound security rule
+    -cant block specifically deny specific port, protocol, ip instead use network access control lists
+    -we can add multiple security groups
+    -all inbound rule blocker by default
+   
+ 
+    
