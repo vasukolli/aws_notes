@@ -1,3 +1,12 @@
 # Defnition
 service that connects op-premise software appliance to cloud-based storage to provide seamless and secure integration between on-premise it-enviormnet and aws storage infracture
-
+AWS storage appliance is available for download can be installed in ESXI or Hyper-V
+Types:
+  -File gateway(NFS): storing plain files: files are stored as buckets(all s3 features applicable)
+   -NFS->storage gateway->{direct connect or internet or amazon vps}->aws{s3->s3-IA->amazon glasier}
+  -Volume Gateway(iSCSI): block based storage
+   -volume interface provides disk volumes using iSCSI protocol, can take point in time snapshots(incremental) saved as ebs snapshots
+    - Stored Volumes: store entire data set on-premise ans asyc backing to s3 inform of EBS(1GB-16TB)
+    - Cached Volumes: store data in s3 and store only freq accessed data in on-premise(1GB-32TB)
+  -Tape Gateway(VTL virtual tape library): used for backups, we can use tape based application backup infracture to user virtual tapes
+  
