@@ -35,3 +35,9 @@ Note:
 Snapshots does not include data held in cache
 
 # Encrypting Root Device
+ -stop ec2
+ -create snapshot of root volume
+ -copy snapshot to diff location , encrypt copy
+ -create image from snapshot, you can find image at AMI category
+ -launch instance from image
+
