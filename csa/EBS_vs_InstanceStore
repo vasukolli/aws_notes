@@ -1,0 +1,24 @@
+# AMI selections:
+ -Region
+ -Operating System
+ -Architecture(32 bit or 64 bit)
+ -Launch Permissions
+ -Storage for root device volume
+  -Instance store also called EPHEMERAL STORAGE
+  -EBS Backed Volumes
+ 
+ Note:
+ For Instance store volume type we can add atmost 1 instance store volume before launching.
+ Instance store volume cannot be encrypted
+ We can also attach EBS volumes to instance store volumes
+ we cannot stop EC2 instance with instance store volume we can only reboot or terminate 
+ EC2 with instance store volume cannot be transfered to another host if host fails you lose ur data(less durability)
+ afer reboot , there is no loss of data
+ By default boot root volumes will be deleted on termination however with ebs , u can teel aws to keep root devise
+ 
+ 
+ EBSvolumes: root device for an instance launched from AMI is an Amazon EBS volume created from an Amazon EBS snapshot
+ Instance store volumes:instance store volume created from a template stored in s3 so slow provisioning 
+ 
+ 
+ 
