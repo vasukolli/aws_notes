@@ -1,0 +1,8 @@
+Load Balancer can be In service or Out of service
+NOTE:
+-If health check status does not changed to Inservice 
+ -check whether ping url (ipaddr/htmlfile) is rechablea
+ -check whether security group is allowing ports
+ -check for outbound rules
+-Elastic load balancer never given static or public ip address so ipaddress cn not be resolved
+-Use dns name in discription tab in load balancer to access load balancer.
