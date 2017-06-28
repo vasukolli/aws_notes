@@ -1,0 +1,6 @@
+# 
+Dashboards: create dashboards to see what is happening in aws
+Alarms: set alarms that notify you when particular thresholds are hit
+Events: Cloud watch Events helps you ti respond to state changes in AWS resources
+Logs: Cloud watch logs helps you to aggregate, monitor and store logs
+
