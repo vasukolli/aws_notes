@@ -13,5 +13,12 @@ integrates with aws services
 Terms:
 Users, groups, roles(assign to aws resources), policies(doc with one or more permissions)
 Note:
+
+
+# ROles
+Roles are secure than storing access key on EC2 instances 
+Roles are easier to manage
 We can attach IAM role to EC2 instance while creating EC2 instalce only
+Roles are universal u can use them in any region
+
 
