@@ -6,9 +6,32 @@
  -vreate file system - mkfs -t ext4 /dev/xvdf
  -mount /dev/xvdf foldername
  
-#Note
+# Note
 we can change volume type while creating new volume from snapshot
 volumes exist on EBS
 volumes are virtual hard disk
 Snapshots exis on S3
-Snapshots are pointin time copies of volumes nad are incremental
+Snapshots are pointin time copies of volumes and are incremental
+
+# RAID (Recomends RAID0 or RAID10)
+RAID=Reduntant Array of Independent Disks
+ -RAID0-Striped, No Redundancy, Good Performance
+ -RAID1-Mirrored, Redundancy
+ -RAID5-Good for reads, bad for writes, AWS does not recommend ever putting RAID 5's on EBS
+ -RAID10-Striped&Mirrored, Good Redundancy, Good Performance
+ 
+# RAID Backups
+Take application consistent snapshots
+Process:
+Stop application writing to disk
+Flush caches to disk
+Steps:Any of the below three
+ -Freeze the file system
+ -Unmount the raid array
+ -Shutting down the associated EC2 instances
+Then take snap shot
+
+Note:
+Snapshots does not include data held in cache
+
+# Encrypting Root Device
