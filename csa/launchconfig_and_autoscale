@@ -1,0 +1,5 @@
+# before autoscale group create we need to create launchconfig
+ -launchconfig is same as EC2 creation but instance is not created
+ -We can select all available zones
+ -based on group size instances are distributed to availability zone
+ 
