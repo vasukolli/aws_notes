@@ -12,5 +12,6 @@ integrates with aws services
 
 Terms:
 Users, groups, roles(assign to aws resources), policies(doc with one or more permissions)
-
+Note:
+We can attach IAM role to EC2 instance while creating EC2 instalce only
 
