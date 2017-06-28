@@ -1,0 +1,18 @@
+A placement group is a logical grouping within a single availability zone. Using placement groups enables applications to participate in a low latency 10Gbps network
+placement groups are recomended latency, high network throughput or both.
+
+Recomended apps for low level network latency and high network throughput
+Eg: Hadoop cluster
+
+Note:
+cant span multiple availability zones
+placement group name should me unique
+Only certain types of instances can be launched(compute optimized,GPUmmemory optimized,storage optimized)
+aws recoment homogenious instance(identical instances) with in placement groups
+cant merge placement groups
+cant move existing instance, should create an amithen launch a new instance in instance group
+
+
+
+
+
