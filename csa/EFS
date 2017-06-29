@@ -1,0 +1,11 @@
+# Elastic file system a file storage service for ec2
+  -storage capacity is elastic, growing and shrinkinf automatically as you add or delete files
+  -can mount volumes to multiple ec2
+  -supports NFS4
+  -pay as u use
+  -can scale to petabytes
+  -supports thousands of concurrent NFS connections
+  -Data is stored across multiple AZ's within a region
+  -read after write consistancy
+  
+  
