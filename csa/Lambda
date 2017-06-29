@@ -1,0 +1,17 @@
+# compute service where you can upload your code and create lambda functions.it takes care of provisioning and managing the servers that you use to run the code.
+ Uses:
+  -event driven compute service whwere aws lambda runs your code in response to events. These events could be
+   changes to data in aws s3 bucket or an amazon dynamo db
+  -compute service to run code in response to HTTp requests using amazon api gateway or api calls made using aws sdks.
+ Pricing:
+ - Number of requests
+   -First1 milion requests are free.$0.20 per 1 million requests
+   -Duration
+    -chrged from code enters and terminates from lambda,price depends on amount of memory allocated to your 
+     your function.
+  Features:
+  No servers
+  Continious scaling
+  super cheap
+   
+  
