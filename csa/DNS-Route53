@@ -1,0 +1,21 @@
+# Routing Policies
+ -Simple:
+   when you have a single resource that performs a given function for your domain 
+ -Weighted:
+   let you to split your traffic based on different weights assigned
+   Eg: set 10% of traffic go to US-EAST-1 and 90% to go to EU-WEST-1
+ -Latency:
+  allows you to route your traffic based on lowest network latency
+  usage: create a latency resource record set for EC2 or ELB in each region that hosts your website
+  wen query reached it directs query to lowest latency region.
+ -Failover:
+   used when we want active/passive setup
+   route53 will monitor health of primary site using health check which monitors health of end points
+ -Geolocation:
+   lets u to chose where ur tarffic will be sent based on geo location of ur users
+  
+Note:
+ELB's doesn't have pre-defined IPv4 address you resolve them using domain name
+Alias record vs CNAMe
+Prefer alias over cname @reason cheaper
+
