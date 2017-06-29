@@ -1,6 +1,48 @@
-# 
+# monitoring service Used to monitor aws resources as well as applications that you run on aws
 Dashboards: create dashboards to see what is happening in aws
-Alarms: set alarms that notify you when particular thresholds are hit
+Alarms: set alarms on cloudwatch metric that notify you when particular thresholds are hit and also we can set actions to be taken
 Events: Cloud watch Events helps you ti respond to state changes in AWS resources
 Logs: Cloud watch logs helps you to aggregate, monitor and store logs
+
+Monitor things:
+ -Compute
+  - Autoscaling Groups
+  - Elastic load balancers
+  - Route53 health checks
+ -Storage
+  -EBS volumes
+  -storage gateways
+  -Cloud Front
+ -Others
+  -Database and analytics
+   -Dynamo Db
+   -Elasticcache nodes
+   -RDS Instances
+   -Elastic MapReduce Job Flows
+   -Red Shift
+  -SNS
+  -SQS ques
+  -Opsworks
+  -Cloudwatch logs
+  -Estimated charges on AWS Bill
+  
+ Hostlevel Metrics:by default 5 min
+  -CPU
+  -Network
+  -Disk
+  -StatusCheck
+  
+  Metrics
+  -retrive up to 2 weeks and older than that use api to retrive
+  -terminated ec2 or elb upto 2 weeks after termination
+  
+ # EC2 Status Checks
+   -system status check(checks underling physical host) 
+   -instance status check(check vm)
+ # Monitor EC2 custom metrics
+   -install required packages for monitoring disk space and ram mentioned in document
+    url: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html
+  
+   
+   
 
