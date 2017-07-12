@@ -1,0 +1,9 @@
+in memory caches 
+ - memcached
+   -memory object caching system
+   - elastic cache is protocol complaint with memcached
+ - redis
+   - in memory key value store supports data structures as soorted lists and sets
+   - support master slave replication and multi-az for cross az redundancy
+   
+   
