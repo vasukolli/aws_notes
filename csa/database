@@ -1,0 +1,47 @@
+Backups:
+ -Automated
+  . allows to recover database to point in time in a retention period.
+  . retention peroid between 1 and 35 days
+  . it takes full daily snapshot and stores transaction logs.
+  . can be recovered within retention period down to a second.
+  . backup data is stored in s3
+  . backups are taken in a defined windows.
+  . during backup storage io may be suspended so elivated latency .
+  . deleted if rds instance deleted
+ -Database Snapshots 
+  . done manually stored even after deletion of rds instance 
+Restore:
+ -if u restore backup then its a new rds instance.
+Encryption:
+ - supported by mysql,oracle,sql server, postgressql,mariadb
+ - encryption is done using aws key management service
+ - encryption reflects to backups,snapshots,read replicas
+ - encryption of existng instance not possible.
+ 
+Multi-AZ:
+ -aloows to have exact copy of db in another availability zone.
+ -synchronous replication
+ -auto failover
+ -disaster recovery only
+ -supported by mysql,oracle,sql server, postgressql,mariadb
+ 
+Read Replica:
+ -for read heavy database work loads 
+ -app can read from read replicas
+ -Asynchronous replication from master
+ -can have 5 read replicas
+ -read replica from read replica
+ -supported by mysql, postgressql,mariadb
+ -must have automatic backups turned on in order to deply a read replica
+ -each read replica have its owb dns end point
+ -can not have read replica that have multi az
+ -can create read replicas of multi-az source databases
+ -read replica can be promoted to their own database this breaks replication
+ -read replica in second region for mysql and mariadb not postgressql
+ DynamoDb vs RDS
+ -rds is not easy for scaling need bigger instance size or to add a read replica-manual intervention needed
+ -dynamo db offerspush button scalling means scale automatically without any downime
+ 
+ 
+ 
+ 
