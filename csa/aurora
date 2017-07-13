@@ -1,0 +1,15 @@
+- its mysql compatable relational databse engine
+- provides 5 times better performance than mysql
+- starts with 10gb, scales in 10gb uncrements to 64 Tb(storage auto scaling)
+- compute resources can scale up to 32vCPUs and 244Gb of memory
+- no push button scaling should be scaled on maintainence window
+- maintaines 2 copies of data in each avail zone and 3 minimum avail zones, 6 copies of data
+- transparently handle loss of 2 copies of data without affecting database write avail and upto 3 copies
+  without affecting read avail.
+- storage is self healing
+Replicas:
+- 2 types of replicas are available
+  - aurora replicas(currently 15)
+  -mysql read replicas(currently 5)
+
+
