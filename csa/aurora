@@ -10,6 +10,9 @@
 Replicas:
 - 2 types of replicas are available
   - aurora replicas(currently 15)
-  -mysql read replicas(currently 5)
+  - mysql read replicas(currently 5)
+  
+Aurora replica:
+  failover priority: teir0,1,2,3,4,5,6
 
 
