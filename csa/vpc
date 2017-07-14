@@ -1,0 +1,38 @@
+Amazon virtual private cloud.
+ -its a virtual ntwk
+ -complete control(your own ip range, creation of subnets, config of routing tables, network gateways)
+ -can create public subnets and private subnets
+ -multiple layers of security inc security groups and network access control lists
+ -can create hardware vpn  conn btw your vpc and your data center.
+Note:
+subnets belongs to sam avail zone,cannot span inbetween multiple availability zones
+sucirity groups can span multiple acls,subnets,routing tables
+1 subnet = 1 AZ
+security groups are stateful , nacl are state less
+when vpc created - security group,network acl, routing tables are created by default
+
+Things we can do using vpc
+ -launch instances into subnet
+ -assign custom ip address ranges in each subnet
+ -configure routing tables btw subnets table decides whether subnet publicily accessible or private
+ -create internet gate way and attach it to our vpc - only on per vpc 
+ -instance security groups
+ -security control over aws resiurces
+ -subnet network access control lists(ACLS acls are state less)
+ 
+Default vpc vs custom vpc
+ -user friendly -- -
+ -a subnets in default vpc have a route out of internet(not default private subnet we have to create) -- 
+ -each ec2 instance has both public and private ip address
+ -if u delete default vpc the only way to gey it back is to contact aws
+ 
+ VPC peering:
+  -allows you to connect one vpc to another via direct network route using private ip addresss.
+  -instances behave as if they were on same subnet
+  -peer vpc with other aws account vpc or other vps in same account
+  -start peering ie 1 central vpc peers with others - no transitive peering(cannot talk one vps via other).
+  
+ Default reserver CIDR in subnets
+  -10.0.0.0(ntwk address),1(vpc router),2(dns server),3(future use),255(network address broad cast so not supported)
+  
+ 
