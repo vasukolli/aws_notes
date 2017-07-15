@@ -34,5 +34,3 @@ Default vpc vs custom vpc
   
  Default reserver CIDR in subnets
   -10.0.0.0(ntwk address),1(vpc router),2(dns server),3(future use),255(network address broad cast so not supported)
-  
- 
