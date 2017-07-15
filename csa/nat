@@ -16,3 +16,13 @@ NAT GATEWAYS
 - remeber to update your route tables
 - no need to disable source destination checks
 
+NAT Instance vs BAStion
+- Bastion used to nat to ec2 in private subnets 
+- Bastion used for administration
+Tips:
+- Bastion is used to securely administer EC2 instances using ssh or rdp in private subnets
+- NAT used to provide internet traffic to EC2 instances in private subnets.
+- 
+
+
+
