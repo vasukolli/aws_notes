@@ -1,0 +1,9 @@
+- capture ip traffic flow  information for the network interfaces with in ur vpc in your resources.
+
+FLow:
+-create iam role for flow logs
+-create loggroup in cloud watch
+-create loggroup in vpc
+-access some service like http in that vpc
+-go to loggroup created and then create log stream
+-see log stream
