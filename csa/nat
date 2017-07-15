@@ -1,0 +1,18 @@
+NAT Instance and Gateways
+- deploy nat gateways to public subnet
+- does not have security group
+Tips:
+NAT Instance
+- when creating nat instance disable source/destination check on the instance
+- Nat instance must be in public subnet
+- there must be route out of private subnet to nat instance inorder for this to work
+- nat instance traffic depends on instance size
+- can create high availability using autoscaling groups, multiple subnets in different az's and a script to automate failover
+NAT GATEWAYS
+- nat gateways scale upto 10Gbps
+- preferd by enterprise
+- not associates with security group
+- automatically assign a public ip address 
+- remeber to update your route tables
+- no need to disable source destination checks
+
