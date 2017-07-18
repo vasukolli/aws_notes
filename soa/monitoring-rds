@@ -1,0 +1,12 @@
+Types:
+ -cloudwatch monitor by metrics
+ -RDS itself by events
+Event subscriptions - subscribe to specific events like instance reboot then we will get an email
+Important RDS metrics:
+ -Databse connections
+ -Disk queue depth
+ -Free storage space
+ -replicalag(seconds)
+ -{read|write}iops
+ -{read|write} latency
+ 
