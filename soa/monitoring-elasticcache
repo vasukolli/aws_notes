@@ -1,0 +1,32 @@
+Important parameters
+-CPU utilization
+-swap usage
+-evictions
+-concurrent connections
+
+-cpuutilization
+ -Memcached
+  -multi-threaded
+  -can handle loads upto 90%, if it exceeds add more nodes to cluster
+  -should be 0 most of the time and should not exceed 50MB
+  -if it exceed 50MB - then increase memcached_connections_overhead paramater
+  -memcached_connections_overhead determines amt of memory to be reserved for memcached connections and other miscellaneous overhead
+ -Redis
+  -not multithreaded. to determine the point in which to scale take 90 and divide by the no of cores
+  -no swapusage, intead use reserved memory
+  
+ Evictions
+ -eviction occurs when a new item is added adn an old item must be removed due to lack of free space in system
+ -Memcached
+  -there is no recomended setting, chose a threshold based off your application
+  -Either scale up(increase in memory)
+  -ScaleOut(add more nodes)
+ -Redis
+  -scaleup(more memory in primary and replicas)
+  
+  Concurrent connections
+   -no recomended setting
+   -if there is large spike in concurrent connectionsthis can either mean a large traffic spike or or uour app not releasing connections
+   -for monitoring set an alrm on the no of concurrent connections
+   
+  
