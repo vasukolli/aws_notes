@@ -24,4 +24,27 @@ Volume types:
    - we can burst performance on this volume up to 3000 iops
       -using io credits
       -the burst would be 2700 iops(3000-300)
+      
+ I/O credits
+ -when volume requires more than given i/o performance it uses i/o credits in credits balance up to maximum of 3000iops
+  -each volume receives an initial i/o of 5400000 i/o credits.
+  -can sustain for 30 min @ 3000iops
+  -when u r not bursting you will be earning credits
+  
+  Pre-Warming EBS volumes
+  -new ebs cen get max performance at the moment they are avail not require init(ie pre warming)
+  -if volume restored from snashot we get i/o latency because it must read all blocks
+  -to avoid this performance hit, youn should read all blocks that have data before using volume(pre-warming)
  
+ EBS cloud watch metrics
+ -Volume{Read|write}{Byte|ops}, VolumeTotal{Read|Write}Time,VolumeIdleTime,VolumeQueuelength,VolumeThroughput percentage,VolumeConsumedReadWrite ops
+ Status checks:
+ - ok,warning(degarded,severly degraded),impaired(stalled or not vaailable),insuffuciant data, 
+ 
+ Modifying EBS volume
+ - if EBS volume attached to current genertion EC2 instance type, you can increase its size, change its volume type without diattaching it
+    Process:
+     -issue modification command
+     -monitor progress
+     -after modified extend volume file system to take advantage of this increased storage capacity.
+     
