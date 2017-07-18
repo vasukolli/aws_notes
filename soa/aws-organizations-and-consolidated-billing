@@ -1,0 +1,25 @@
+aws organization:
+ -account management service enables you to consolidate multiple aws accounts into an organization tht you create and centrally ,maanage
+Tips:
+-limit 20 linked accounts for consolidated billing
+Available in two feature sets:
+-consolidate billing
+-all features
+
+root -(policy)-> ou --> aws account
+     -(policy)-> ou --> aws account
+     -(policy)-> aws account
+     
+Eg:
+  paying account(independent acnnot access other accounts)-->Test
+                                                          -->Dev     > all will have same monthly bill 
+                                                          -->prod 
+                                                          
+advantages:
+-one bill per aws account
+-very easy to track charges and alocate costs
+-volume pricing discount
+
+Best practices
+- enable multifactor auth for root acc
+- 
