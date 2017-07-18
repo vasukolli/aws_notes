@@ -1,0 +1,9 @@
+Protocol
+-basic minitoring is going to use ICMP
+Scenario:
+vpc
+ -subnets1(scg1), subnets2(scg2)
+ -security group in 1-a region(scg1)
+ -security group in 1-a region(scg2)
+ 
+if we want ro monitor instance in scg1 from scg2 we need to creat a icmp inbound rule in scg1 with source as scg2
