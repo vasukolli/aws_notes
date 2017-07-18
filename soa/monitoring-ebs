@@ -1,0 +1,27 @@
+Volume types:
+-General purpose(ssd)-gp2
+ -system boot volumes,virtual desktops,low tatency apps,dev and test env
+-provisioned iops(ssd)-io1
+ -apps that require sustained iops(>10000iops or 160MiB/s) large database workloads 
+-throughput optimised(HDD)-st1
+ -straming work loads(consistent throughput at low price) big data, dataware housing, log processing
+ -cannot be a boot volume
+-cold(HDD)-sc1
+ -throughput oriented large storage infreq accessed data
+ -cannot be a boot volume
+ 
+ Tips:
+ - all boot volumes must be ssd
+ - general purpose iops caped to 3000 iops 
+ 
+ IOPS & Volumes
+ -general purpose ssd volumes have a base of 3 IOPS per/GB of volume size
+  -max volume size of 16,384GB
+  -max iops 10000 
+ EG:
+ 100GB volume
+  -get 3iops per gb = 3x100=300iops
+   - we can burst performance on this volume up to 3000 iops
+      -using io credits
+      -the burst would be 2700 iops(3000-300)
+ 
